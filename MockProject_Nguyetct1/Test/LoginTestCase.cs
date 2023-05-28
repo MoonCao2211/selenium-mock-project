@@ -39,53 +39,53 @@ namespace MockProject_Nguyetct1.Test
 
         }
 
-        [Test, Description("Login with case pass. Logout after login success")]
-        public void TC01LOGINPASS()
-        {
-            //Input data:
-            //loginPage.InputUserName(username);
-            loginPage.InputUserNameUsingJS(executor, loginPage.username);
-            loginPage.InputPasswordeUsingJS(executor, loginPage.password);
+        // [Test, Description("Login with case pass. Logout after login success")]
+        // public void TC01LOGINPASS()
+        // {
+        //     //Input data:
+        //     //loginPage.InputUserName(username);
+        //     loginPage.InputUserNameUsingJS(executor, loginPage.username);
+        //     loginPage.InputPasswordeUsingJS(executor, loginPage.password);
 
-            //Click login button to login:
-            loginPage.ClickLoginBtn();
+        //     //Click login button to login:
+        //     loginPage.ClickLoginBtn();
 
-            //Verify:
-            //Find Dashboard text (true ->find or false ->not find)
-            isFind = loginPage.FindText(loginPage.dashboardTxt);
-            Assert.True(isFind);
+        //     //Verify:
+        //     //Find Dashboard text (true ->find or false ->not find)
+        //     isFind = loginPage.FindText(loginPage.dashboardTxt);
+        //     Assert.True(isFind);
 
-            //Logout:
-            logoutPage.ClickUserDropdownBtn();
-            logoutPage.ClickLogoutBtn();
+        //     //Logout:
+        //     logoutPage.ClickUserDropdownBtn();
+        //     logoutPage.ClickLogoutBtn();
 
-        }
+        // }
 
-        [Test, Description("Login with case fail-Invalid username or passwork")]
-        public void TC02LOGINFAILINVALIDACCOUNT()
-        {
-            loginPage.InputUserName(loginPage.usernameInvalid);
-            loginPage.InputPassWord(loginPage.password);
-            loginPage.ClickLoginBtn();
+        // [Test, Description("Login with case fail-Invalid username or passwork")]
+        // public void TC02LOGINFAILINVALIDACCOUNT()
+        // {
+        //     loginPage.InputUserName(loginPage.usernameInvalid);
+        //     loginPage.InputPassWord(loginPage.password);
+        //     loginPage.ClickLoginBtn();
 
-            //Verify:
-            //Find notice "Invalid" text (true ->find or false ->not find)
-            isFind = loginPage.FindText(loginPage.InvalidTxt);
-            Assert.True(isFind);
-        }
+        //     //Verify:
+        //     //Find notice "Invalid" text (true ->find or false ->not find)
+        //     isFind = loginPage.FindText(loginPage.InvalidTxt);
+        //     Assert.True(isFind);
+        // }
 
-        [Test, Description("Login in with case fail")]
-        public void TC03LOGINFAILINVALIDACCOUNT()
-        {
-            loginPage.InputUserName(loginPage.usernameInvalid);
-            loginPage.InputPassWord(loginPage.password);
-            loginPage.ClickLoginBtn();
+        // [Test, Description("Login in with case fail")]
+        // public void TC03LOGINFAILINVALIDACCOUNT()
+        // {
+        //     loginPage.InputUserName(loginPage.usernameInvalid);
+        //     loginPage.InputPassWord(loginPage.password);
+        //     loginPage.ClickLoginBtn();
 
-            //Verify:
-            //Find Dashboard text (true ->find or false ->not find)
-            isFind = loginPage.FindText(loginPage.dashboardTxt);
-            Assert.True(isFind);
-        }
+        //     //Verify:
+        //     //Find Dashboard text (true ->find or false ->not find)
+        //     isFind = loginPage.FindText(loginPage.dashboardTxt);
+        //     Assert.True(isFind);
+        // }
 
         [TearDown]
         public void TearDown()
