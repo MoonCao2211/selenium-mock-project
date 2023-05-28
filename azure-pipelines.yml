@@ -32,7 +32,7 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*test.dll
+      **\*testhost.dll.config
     searchFolder: '$(System.DefaultWorkingDirectory)'
     distributionBatchType: basedOnExecutionTime
     runInParallel: true
