@@ -32,7 +32,7 @@ steps:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\*testhost*.dll.config
-      !**\*TestAdapter.dll
+      !**\*NUnit3.TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     runTestsInIsolation: true
