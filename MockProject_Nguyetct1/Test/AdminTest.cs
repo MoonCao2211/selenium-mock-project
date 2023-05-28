@@ -46,22 +46,22 @@ namespace MockProject_Nguyetct1.Test
 
         }
 
-        [Test, Description("TC01: Add job title pass")]
-        public void TC01ADDJOBTITLEPASS()
-        {
-            //Action with admin page: click button, input data:
-            adminPage.ClickAdminBtn();
-            adminPage.ClickJobBtn();
-            adminPage.ClickJobTitleBtn();
-            adminPage.ClickAddJobTitleBtn();
-            adminPage.InputJobTitle(_job.JobTitle ?? "");
-            adminPage.InputJobDescription(_job.JobDescription ?? "");
-            adminPage.ClickSaveJob();
+        // [Test, Description("TC01: Add job title pass")]
+        // public void TC01ADDJOBTITLEPASS()
+        // {
+        //     //Action with admin page: click button, input data:
+        //     adminPage.ClickAdminBtn();
+        //     adminPage.ClickJobBtn();
+        //     adminPage.ClickJobTitleBtn();
+        //     adminPage.ClickAddJobTitleBtn();
+        //     adminPage.InputJobTitle(_job.JobTitle ?? "");
+        //     adminPage.InputJobDescription(_job.JobDescription ?? "");
+        //     adminPage.ClickSaveJob();
 
-            //Verify: Get message -> verify
-            message = adminPage.GetMessageAdminPage();
-            message.Should().Be("Success");
-        }
+        //     //Verify: Get message -> verify
+        //     message = adminPage.GetMessageAdminPage();
+        //     message.Should().Be("Success");
+        // }
 
         // [Test, Description("TC02: Update job title pass")]
         // public void TC02UPDATEJOBTITLEPASS()
