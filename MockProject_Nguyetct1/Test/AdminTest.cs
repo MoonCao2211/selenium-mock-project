@@ -63,21 +63,21 @@ namespace MockProject_Nguyetct1.Test
             message.Should().Be("Success");
         }
 
-        // [Test, Description("TC02: Update job title pass")]
-        // public void TC02UPDATEJOBTITLEPASS()
-        // {
-        //     adminPage.ClickAdminBtn();
-        //     adminPage.ClickJobBtn();
-        //     adminPage.ClickJobTitleBtn();
-        //     //Update Job
+        [Test, Description("TC02: Update job title pass")]
+        public void TC02UPDATEJOBTITLEPASS()
+        {
+            adminPage.ClickAdminBtn();
+            adminPage.ClickJobBtn();
+            adminPage.ClickJobTitleBtn();
+            //Update Job
 
-        //     adminPage.UpdateJobs(_job);
-        //     //Verify: Get message -> verify
-        //     message = adminPage.GetMessageAdminPage();
-        //     message.Should().Be("Success");
+            adminPage.UpdateJobs(_job);
+            //Verify: Get message -> verify
+            message = adminPage.GetMessageAdminPage();
+            message.Should().Be("Success");
 
 
-        // }
+        }
 
         // [Test, TestCaseSource(typeof(AdminPage), nameof(AdminPage.GetJobsUpdate)), Description("TC03: Delete job title pass")]
         // public void TC02DELETEJOBTITLEPASS(Job job)
