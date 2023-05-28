@@ -28,6 +28,16 @@ steps:
     command: restore
     restoreSolution: '$(solution)'
     feedsToUse: select
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '**/*.csproj'
+    arguments: '-o testpath'
+    zipAfterPublish: false
+    modifyOutputPath: true
     
 - task: DotNetCoreCLI@2
   displayName: 'build'
