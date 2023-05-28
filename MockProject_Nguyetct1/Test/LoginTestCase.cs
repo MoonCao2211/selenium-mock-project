@@ -61,31 +61,31 @@ namespace MockProject_Nguyetct1.Test
 
         }
 
-        // [Test, Description("Login with case fail-Invalid username or passwork")]
-        // public void TC02LOGINFAILINVALIDACCOUNT()
-        // {
-        //     loginPage.InputUserName(loginPage.usernameInvalid);
-        //     loginPage.InputPassWord(loginPage.password);
-        //     loginPage.ClickLoginBtn();
+        [Test, Description("Login with case fail-Invalid username or passwork")]
+        public void TC02LOGINFAILINVALIDACCOUNT()
+        {
+            loginPage.InputUserName(loginPage.usernameInvalid);
+            loginPage.InputPassWord(loginPage.password);
+            loginPage.ClickLoginBtn();
 
-        //     //Verify:
-        //     //Find notice "Invalid" text (true ->find or false ->not find)
-        //     isFind = loginPage.FindText(loginPage.InvalidTxt);
-        //     Assert.True(isFind);
-        // }
+            //Verify:
+            //Find notice "Invalid" text (true ->find or false ->not find)
+            isFind = loginPage.FindText(loginPage.InvalidTxt);
+            Assert.True(isFind);
+        }
 
-        // [Test, Description("Login in with case fail")]
-        // public void TC03LOGINFAILINVALIDACCOUNT()
-        // {
-        //     loginPage.InputUserName(loginPage.usernameInvalid);
-        //     loginPage.InputPassWord(loginPage.password);
-        //     loginPage.ClickLoginBtn();
+        [Test, Description("Login in with case fail")]
+        public void TC03LOGINFAILINVALIDACCOUNT()
+        {
+            loginPage.InputUserName(loginPage.usernameInvalid);
+            loginPage.InputPassWord(loginPage.password);
+            loginPage.ClickLoginBtn();
 
-        //     //Verify:
-        //     //Find Dashboard text (true ->find or false ->not find)
-        //     isFind = loginPage.FindText(loginPage.dashboardTxt);
-        //     Assert.True(isFind);
-        // }
+            //Verify:
+            //Find Dashboard text (true ->find or false ->not find)
+            isFind = loginPage.FindText(loginPage.dashboardTxt);
+            Assert.True(isFind);
+        }
 
         [TearDown]
         public void TearDown()
