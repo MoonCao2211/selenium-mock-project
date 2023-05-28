@@ -11,8 +11,8 @@ namespace MockProject_Nguyetct1.Test
         [Test, Description("TC01: Test admin authenticate pass")]
         public void TC01USERREGISTERPASS()
         {
-            // var result = AdminService.AdminAuthen();
-            // result.Should().NotBeNull();
+            var result = AdminService.AdminAuthen();
+            result.Should().NotBeNull();
         }
 
     }
